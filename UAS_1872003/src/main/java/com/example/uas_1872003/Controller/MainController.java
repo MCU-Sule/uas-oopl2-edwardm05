@@ -120,7 +120,7 @@ public class MainController implements Initializable {
     public void saveMemberAction(ActionEvent actionEvent) {
         MemberDAO mDAO = new MemberDAO();
         FeMemberEntity data = new FeMemberEntity();
-        data.setCitizenId(tfID);
+        data.setCitizenId(tfID.getText());
         data.setName(tfNama.getText());
         data.setAddress(tfAlamat.getText());
         data.setPhone(tfPhone.getText());
@@ -132,11 +132,21 @@ public class MainController implements Initializable {
     }
 
     public void resetAction(ActionEvent actionEvent) {
+        tfID.setText(null);
+        tfNama.setText(null);
+        tfAlamat.setText(null);
+        tfPhone.setText(null);
+        tfEmail.setText(null);
+        tfUsername.setText(null);
     }
 
     public void updateAction(ActionEvent actionEvent) {
     }
 
     public void saveTransAction(ActionEvent actionEvent) {
+        TransactionDAO tDAO = new TransactionDAO();
+        FeTransactionEntity data = new FeTransactionEntity();
+        data.setNominal(Long.parseLong(tfNominal.getText()));
+        data.setTransDate(dpDate.getValue());
     }
 }
