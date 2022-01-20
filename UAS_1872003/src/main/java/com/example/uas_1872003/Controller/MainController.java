@@ -125,6 +125,8 @@ public class MainController implements Initializable {
         data.setAddress(tfAlamat.getText());
         data.setPhone(tfPhone.getText());
         data.setEmail(tfEmail.getText());
+        data.setUsername(tfUsername.getText());
+        data.setBirthdate(dpDate.getValue());
     }
 
     public void resetAction(ActionEvent actionEvent) {
