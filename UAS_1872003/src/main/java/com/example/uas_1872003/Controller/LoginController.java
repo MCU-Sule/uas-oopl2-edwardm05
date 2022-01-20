@@ -28,7 +28,10 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        ResourceBundle bundle = ResourceBundle.getBundle("Bundle_EN");
+        labelID.setText("id.text");
+        labelPassword.setText("password.text");
+        btnLogin.setText("login.text");
     }
 
     public void loginAction(ActionEvent actionEvent) throws IOException {
