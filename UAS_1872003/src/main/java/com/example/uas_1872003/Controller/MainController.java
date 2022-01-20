@@ -118,6 +118,13 @@ public class MainController implements Initializable {
     }
 
     public void saveMemberAction(ActionEvent actionEvent) {
+        MemberDAO mDAO = new MemberDAO();
+        FeMemberEntity data = new FeMemberEntity();
+        data.setCitizenId(tfID);
+        data.setName(tfNama.getText());
+        data.setAddress(tfAlamat.getText());
+        data.setPhone(tfPhone.getText());
+        data.setEmail(tfEmail.getText());
     }
 
     public void resetAction(ActionEvent actionEvent) {
